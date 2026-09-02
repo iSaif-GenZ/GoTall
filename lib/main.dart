@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_tall/core/theme/app_theme.dart';
 import 'package:go_tall/features/onboarding/presentation/pages/welcome_page.dart';
 
 void main() async {
@@ -12,7 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: WelcomePage(),
+      debugShowCheckedModeBanner: false,
+      title: 'Go Tall',
+      theme: AppTheme.darkTheme,
+      home: const WelcomePage(),
     );
   }
 }

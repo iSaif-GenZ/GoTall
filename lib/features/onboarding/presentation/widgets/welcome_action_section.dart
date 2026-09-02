@@ -9,35 +9,15 @@ class WelcomeActionSection extends StatelessWidget {
     return Column(
       children: [
         Text(
-          textAlign: TextAlign.center,
           "Start your height growth journey today",
-          style: TextStyle(
-            fontSize: 36,
-            fontFamily: 'PlusJakartaSans',
-            fontWeight: FontWeight.w600,
-            color: Color(0xFFF0F0F8),
-          ),
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.displayLarge,
         ),
-        SizedBox(height: 24),
+        const SizedBox(height: 24),
         SizedBox(
           width: double.infinity,
           height: 56,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xFF00E8F8),
-              elevation: 0,
-            ),
-            onPressed: () {},
-            child: Text(
-              "Get Started",
-              style: TextStyle(
-                color: Color(0xFF051232),
-                fontSize: 16,
-                fontFamily: 'PlusJakartaSans',
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
+          child: ElevatedButton(onPressed: () {}, child: Text("Get Started")),
         ),
       ],
     );
