@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_tall/core/routes/app_routes.dart';
+import 'package:go_tall/features/onboarding/presentation/widgets/welcome_start_button.dart';
 
 class WelcomeActionSection extends StatelessWidget {
   const WelcomeActionSection({super.key});
@@ -17,7 +19,11 @@ class WelcomeActionSection extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           height: 56,
-          child: ElevatedButton(onPressed: () {}, child: Text("Get Started")),
+          child: WelcomeStartButton(onPressed: () async {
+            await Navigator.of(context).pushNamed(
+              AppRoutes.personalDetailsPage,
+            );
+          }),
         ),
       ],
     );

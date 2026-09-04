@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 abstract class AppColors {
+
+  static const Color royalBluePressed = Color(0xFF1E56C8);
   // الألوان المستخرجة مباشرة من الكود والصور
   static const Color primaryTurquoise = Color(
     0xFF00E8F8,
