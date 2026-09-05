@@ -9,7 +9,7 @@ abstract class AppTheme {
       brightness: Brightness.dark,
       fontFamily: AppTextStyles.fontFamily,
       scaffoldBackgroundColor: AppColors.darkNavy,
-      
+
       // نظام الألوان الداكن المعتمد
       colorScheme: const ColorScheme.dark(
         primary: AppColors.primaryTurquoise,
@@ -36,7 +36,11 @@ abstract class AppTheme {
       // ثيم النصوص العام
       textTheme: const TextTheme(
         displayLarge: AppTextStyles.welcomeTitle,
-        bodyMedium: AppTextStyles.bodyMedium,
+        titleLarge: AppTextStyles.appBarTitle,
+        titleMedium: AppTextStyles.pageTitle,
+        bodyMedium: AppTextStyles.pageDescription,
+        labelLarge: AppTextStyles.primaryButtonText,
+        labelMedium: AppTextStyles.appBarCounter,
       ),
     );
   }
