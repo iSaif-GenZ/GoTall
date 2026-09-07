@@ -1,12 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:go_tall/core/routes/app_routes.dart';
 import 'package:go_tall/core/theme/app_colors.dart';
 import 'package:go_tall/core/theme/app_theme.dart';
 import 'package:go_tall/features/onboarding/presentation/pages/personal_details_page.dart';
 import 'package:go_tall/features/onboarding/presentation/pages/welcome_page.dart';
 
-void main() async {
+Future main() async {
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      systemNavigationBarColor: AppColors.darkNavy,
+      systemNavigationBarContrastEnforced: false,
+    ),
+  );
   runApp(MyApp());
 }
 

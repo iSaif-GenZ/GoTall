@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_tall/core/theme/app_colors.dart';
+import 'package:go_tall/features/onboarding/presentation/widgets/custom_back_button.dart';
 
 class CustomAppBar extends StatelessWidget {
   final int currentStep;
@@ -15,7 +16,7 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(Icons.arrow_back, size: 24, color: AppColors.lightWhite),
+          CustomBackButton(),
           Text("Personal Details", style: Theme.of(context).textTheme.titleLarge,),
           Text("$currentStep / 4", style: Theme.of(context).textTheme.labelMedium,),
         ],

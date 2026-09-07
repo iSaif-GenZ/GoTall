@@ -10,13 +10,22 @@ abstract class AppColors {
   static const Color darkNavy = Color(
     0xFF051232,
   ); // لون الخلفية الرئيسي والظلال
+
+  static const Color deepNavy = Color(0xFF091B3D);
+
   static const Color deepRoyalBlue = Color(
     0xFF0946A9,
   ); // أزرق ثانوي (GlowCircle)
   static const Color lightWhite = Color(0xFFF0F0F8); // لون النصوص والإضاءات
   static const Color lightWhite72 = Color(0xB8FFFFFF);
+  static const Color lightWhite48 = Color(0x7AF0F0F8);
 
-  static const Color slateGray = Color(0xFF8F9CAE);
+  static const Color softBlue = Color(0xFF80A3D0);
+
+  static const Color midnightNavy = Color(0xFF030F26);
+
+  static const Color slateGray = Color(0xFF8F9CAE); 
+  static const Color slateBlue = Color(0xFF7688A8);
 
   // درجات الأبيض المائل للرمادي (F0F0F8) بحسب نسبة الشفافية
   static const Color lightWhite24 = Color(0x3DF0F0F8); // شفافية 24% (للفواضل)

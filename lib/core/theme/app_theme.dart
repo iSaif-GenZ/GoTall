@@ -38,9 +38,17 @@ abstract class AppTheme {
         displayLarge: AppTextStyles.welcomeTitle,
         titleLarge: AppTextStyles.appBarTitle,
         titleMedium: AppTextStyles.pageTitle,
+        bodyLarge: AppTextStyles.inputText,
         bodyMedium: AppTextStyles.pageDescription,
+        bodySmall: AppTextStyles.inputLabelStyle,
         labelLarge: AppTextStyles.primaryButtonText,
         labelMedium: AppTextStyles.appBarCounter,
+        labelSmall: AppTextStyles.formLabel,
+        
+      ),
+
+      inputDecorationTheme: const InputDecorationTheme(
+        hintStyle: AppTextStyles.inputHint,
       ),
     );
   }

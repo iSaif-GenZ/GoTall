@@ -49,6 +49,41 @@ abstract class AppTextStyles {
     color: AppColors.darkNavy,
   );
 
+  static const TextStyle inputLabelStyle = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: 14,
+    fontWeight: FontWeight.w600,
+    color: AppColors.lightWhite,
+  );
+
+  static const TextStyle inputHint = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    color: AppColors.lightWhite48,
+  );
+
+  static const TextStyle inputText = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    color: AppColors.lightWhite,
+  );
+
+  static const TextStyle formLabel = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: AppColors.softBlue,
+  );
+
+  static const TextStyle buttonLabel = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: AppColors.slateBlue,
+  );
+
   // // نصوص عادية عامة للتطبيق
   // static const TextStyle bodyMedium = TextStyle(
   //   fontFamily: fontFamily,
