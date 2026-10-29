@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:go_tall/features/onboarding/presentation/widgets/app_date_picker_input.dart';
-import 'package:go_tall/features/onboarding/presentation/widgets/app_gender_selector.dart';
+import 'package:go_tall/features/onboarding/presentation/widgets/app_options_selector.dart';
 import 'package:go_tall/features/onboarding/presentation/widgets/app_text_input.dart';
 import 'package:go_tall/features/onboarding/presentation/widgets/input_wrapper.dart';
 
-class Appform extends StatefulWidget {
+class PersonalDetailsform extends StatefulWidget {
   final ValueChanged<bool> onFormChanged;
-  const Appform({super.key, required this.onFormChanged});
+  const PersonalDetailsform({super.key, required this.onFormChanged});
 
   @override
-  State<Appform> createState() => _AppformState();
+  State<PersonalDetailsform> createState() => _PersonalDetailsformState();
 }
 
-class _AppformState extends State<Appform> {
+class _PersonalDetailsformState extends State<PersonalDetailsform> {
   bool _isNameFilled = false;
   bool _isGenderSelected = false;
   bool _isDateSelected = false;
@@ -40,8 +40,10 @@ class _AppformState extends State<Appform> {
         SizedBox(height: 16),
         InputWrapper(
           label: "Gender",
-          child: AppGenderSelector(
-            onGenderSelected: (gender) {
+          child: AppOptionsSelector(
+            options: const ["Female", "Male"],
+            onOptionSelected: (gender) {
+              // استخدام الاسم الجديد للدالة
               _isGenderSelected = gender != null;
               _validateForm();
             },

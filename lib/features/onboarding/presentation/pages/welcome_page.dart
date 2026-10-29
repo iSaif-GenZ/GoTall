@@ -10,15 +10,16 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 72),
+              const SizedBox(height: 72),
               WelcomeHeaderImage(),
-              SizedBox(height: 196),
+              const SizedBox(height: 196),
               WelcomeActionSection(),
-              SizedBox(height: 64),
+              const SizedBox(height: 64),
             ],
           ),
         ),

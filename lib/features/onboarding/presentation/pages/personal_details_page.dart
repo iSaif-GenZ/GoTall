@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:go_tall/features/onboarding/presentation/widgets/AppForm.dart';
+import 'package:go_tall/core/routes/app_routes.dart';
+import 'package:go_tall/features/onboarding/presentation/widgets/personal_details_form.dart';
 import 'package:go_tall/features/onboarding/presentation/widgets/custom_app_bar.dart';
-import 'package:go_tall/features/onboarding/presentation/widgets/next_button.dart';
+import 'package:go_tall/features/onboarding/presentation/widgets/app_primary_button.dart';
 import 'package:go_tall/features/onboarding/presentation/widgets/page_intro.dart';
 import 'package:go_tall/features/onboarding/presentation/widgets/step_progress_indicator.dart';
 
@@ -21,7 +22,7 @@ class _PersonalDetailsPageState extends State<PersonalDetailsPage> {
       body: SafeArea(
         child: Column(
           children: [
-            CustomAppBar(currentStep: 1),
+            CustomAppBar(currentStep: 1, title: "Personal Details"),
             Expanded(
               child: SingleChildScrollView(
                 physics: BouncingScrollPhysics(),
@@ -29,27 +30,32 @@ class _PersonalDetailsPageState extends State<PersonalDetailsPage> {
                   padding: EdgeInsets.symmetric(horizontal: 24.0),
                   child: Column(
                     children: [
-                      SizedBox(height: 16.0),
+                      const SizedBox(height: 16.0),
                       StepProgressIndicator(currentStep: 1, totalSteps: 4),
-                      SizedBox(height: 32.0),
+                      const SizedBox(height: 32.0),
                       const PageIntro(
                         title: "Let’s Get to Know You",
                         description:
                             "Enter some basic information to personalize your experience.",
                       ),
-                      SizedBox(height: 24.0),
-                      Appform(
+                      const SizedBox(height: 24.0),
+                      PersonalDetailsform(
                         onFormChanged: (isValid) {
                           setState(() {
                             _isFormValid = isValid;
                           });
                         },
                       ),
-                      SizedBox(height: 32.0),
-                      NextButton(
-                        onPressed: () {
-                          _isFormValid ? () {} : null;
-                        },
+                      const SizedBox(height: 32.0),
+                      AppPrimaryButton(
+                        onPressed: _isFormValid
+                              ? () {
+                                 Navigator.of(
+                                    context,
+                                  ).pushNamed(AppRoutes.bodyMeasurementsPage);
+                                }
+                              : null,
+                        
                         isActive: _isFormValid,
                       ),
                     ],

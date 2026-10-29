@@ -29,13 +29,13 @@ abstract class AppTextStyles {
     fontFamily: fontFamily,
     fontSize: 17,
     fontWeight: FontWeight.w400,
-    color: AppColors.lightWhite, 
+    color: AppColors.lightWhite,
     height: 1.47,
   );
 
   static const TextStyle pageDescription = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 14, 
+    fontSize: 14,
     fontWeight: FontWeight.w400,
     color: AppColors.slateGray,
     height: 1.47,
@@ -84,11 +84,27 @@ abstract class AppTextStyles {
     color: AppColors.slateBlue,
   );
 
-  // // نصوص عادية عامة للتطبيق
-  // static const TextStyle bodyMedium = TextStyle(
-  //   fontFamily: fontFamily,
-  //   fontSize: 14,
-  //   fontWeight: FontWeight.normal,
-  //   color: AppColors.lightWhite,
-  // );
+  static const TextStyle bodyRegular14 = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    height: 20 / 14, // مطابقة تامة لارتفاع السطر 20 في فيقما
+    color: AppColors.lightCyan,
+  );
+
+  static const TextStyle displayBold48 = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: 48,
+    fontWeight: FontWeight.bold,
+    color: Color(0xFF00E8F8),
+    height: 58 / 48, // لتطبيق Line Height (58) بشكل دقيق
+  );
+
+  static const TextStyle customText16 = TextStyle(
+    fontFamily: fontFamily,
+    fontSize: 16,
+    fontWeight: FontWeight.w600, // SemiBold
+    height: 24 / 16, // Line height 24
+    color: AppColors.lightWhite, // F0F0F8
+  );
 }

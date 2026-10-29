@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:go_tall/core/theme/app_colors.dart';
 import 'package:go_tall/core/theme/app_text_styles.dart';
 
-class NextButton extends StatelessWidget {
-  final VoidCallback onPressed;
+class AppPrimaryButton extends StatelessWidget {
+  final VoidCallback? onPressed;
   final bool isActive;
-  const NextButton({super.key, required this.onPressed, this.isActive = false});
+  final String text;
+  const AppPrimaryButton({super.key, required this.onPressed, this.isActive = false, this.text = 'Next'});
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +54,7 @@ class NextButton extends StatelessWidget {
           }),
         ),
         child: Text(
-          "Next",
+          text,
           style: AppTextStyles.buttonLabel.copyWith(
             color: isActive ? AppColors.darkNavy : null,
           ),

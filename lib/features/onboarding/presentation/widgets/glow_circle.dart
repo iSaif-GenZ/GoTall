@@ -1,26 +1,37 @@
 import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 
 class GlowCircle extends StatelessWidget {
   final Color color;
-  const GlowCircle({super.key, this.color = const Color(0xFF0946A9)});
+  final double width;
+  final double height;
+  final double blur;
+  final double alpha;
+
+  const GlowCircle({
+    super.key,
+    required this.color,
+    required this.width,
+    required this.height,
+    required this.blur,
+    required this.alpha,
+  });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 300,
-      height: 300,
+      width: width,
+      height: height,
       child: ImageFiltered(
         imageFilter: ImageFilter.blur(
-          sigmaX: 140,
-          sigmaY: 140,
+          sigmaX: blur,
+          sigmaY: blur,
           tileMode: TileMode.decal,
         ),
         child: Container(
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: color.withValues(alpha: 0.4),
+            color: color.withValues(alpha: alpha),
           ),
         ),
       ),

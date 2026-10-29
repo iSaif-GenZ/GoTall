@@ -3,12 +3,18 @@ import 'package:flutter/material.dart';
 class InputWrapper extends StatelessWidget {
   final String label;
   final Widget child;
-  const InputWrapper({super.key, required this.label, required this.child});
+  final CrossAxisAlignment alignment;
+  const InputWrapper({
+    super.key,
+    required this.label,
+    required this.child,
+    this.alignment = CrossAxisAlignment.start,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: alignment,
       children: [
         Text(
           label,
@@ -18,7 +24,7 @@ class InputWrapper extends StatelessWidget {
             applyHeightToLastDescent: false,
           ),
         ),
-        SizedBox(height: 8,),
+        const SizedBox(height: 8),
         child,
       ],
     );

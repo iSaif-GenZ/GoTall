@@ -24,8 +24,11 @@ abstract class AppColors {
 
   static const Color midnightNavy = Color(0xFF030F26);
 
-  static const Color slateGray = Color(0xFF8F9CAE); 
+  static const Color slateGray = Color(0xFF8F9CAE);
+  static const Color slateGray60 = Color(0x998F9CAE);
   static const Color slateBlue = Color(0xFF7688A8);
+  
+  static const Color lightCyan = Color(0xFFB8FFFF);
 
   // درجات الأبيض المائل للرمادي (F0F0F8) بحسب نسبة الشفافية
   static const Color lightWhite24 = Color(0x3DF0F0F8); // شفافية 24% (للفواضل)

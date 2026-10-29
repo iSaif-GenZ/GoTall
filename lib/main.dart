@@ -3,6 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:go_tall/core/routes/app_routes.dart';
 import 'package:go_tall/core/theme/app_colors.dart';
 import 'package:go_tall/core/theme/app_theme.dart';
+import 'package:go_tall/features/onboarding/presentation/pages/body_measurements_page.dart';
+import 'package:go_tall/features/onboarding/presentation/pages/growth_calculation_page.dart';
+import 'package:go_tall/features/onboarding/presentation/pages/lifestyle_page.dart';
+import 'package:go_tall/features/onboarding/presentation/pages/parents_heights_page.dart';
 import 'package:go_tall/features/onboarding/presentation/pages/personal_details_page.dart';
 import 'package:go_tall/features/onboarding/presentation/pages/welcome_page.dart';
 
@@ -46,6 +50,10 @@ class MyApp extends StatelessWidget {
       routes: {
         AppRoutes.welcomePage: (context) => const WelcomePage(),
         AppRoutes.personalDetailsPage: (context) => const PersonalDetailsPage(),
+        AppRoutes.bodyMeasurementsPage: (context) => const BodyMeasurements(), 
+        AppRoutes.parentsHeightsPage: (context) => const ParentsHeights(),
+        AppRoutes.lifestylePage: (context) => const LifestylePage(),
+        AppRoutes.growthCalculationScreenState: (context) => const GrowthCalculationPage(),
       },
     );
   }

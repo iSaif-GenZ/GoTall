@@ -4,7 +4,8 @@ import 'package:go_tall/features/onboarding/presentation/widgets/custom_back_but
 
 class CustomAppBar extends StatelessWidget {
   final int currentStep;
-  const CustomAppBar({super.key, required this.currentStep});
+  final String title;
+  const CustomAppBar({super.key, required this.currentStep, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class CustomAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CustomBackButton(),
-          Text("Personal Details", style: Theme.of(context).textTheme.titleLarge,),
+          Text(title, style: Theme.of(context).textTheme.titleLarge,),
           Text("$currentStep / 4", style: Theme.of(context).textTheme.labelMedium,),
         ],
       ),
